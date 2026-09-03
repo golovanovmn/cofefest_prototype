@@ -246,8 +246,8 @@ function renderItems() {
         <div>
           <p class="item-title">${p.title}${p.weights.length === 1 && p.weights[0].id === '1000' && !p.title.includes('кг') ? ', 1 кг' : ''}</p>
           <div class="item-controls">
-            ${p.grinds.length && p.type === 'coffee' ? `<select data-act="grind">${grindOpts}</select>` : ''}
-            ${p.weights.length > 1 ? `<select data-act="weight">${weightOpts}</select>` : ''}
+            ${p.type === 'coffee' && p.grinds.length > 1 ? `<select class="opt-select" data-act="grind" aria-label="Помол">${grindOpts}</select>` : ''}
+            ${p.weights.length > 1 ? `<select class="opt-select" data-act="weight" aria-label="Вес">${weightOpts}</select>` : ''}
             <div class="qty">
               Количество
               <button type="button" data-act="minus">−</button>
@@ -402,12 +402,25 @@ function addItem(productId) {
   renderAll();
 }
 
+function updateItemPrice(itemEl, item) {
+  const col = itemEl.querySelector('.price-col');
+  if (!col) return;
+  const u = unitPrice(item);
+  col.innerHTML = `
+    ${u.hasDiscount ? `<span class="old">${money(u.base)}</span>` : ''}
+    <div class="price">${money(u.sale)}</div>`;
+}
+
 function bindCart() {
   document.getElementById('items').addEventListener('click', (e) => {
+    const actEl = e.target.closest('[data-act]');
+    if (!actEl) return;
+    const act = actEl.dataset.act;
+    if (act !== 'minus' && act !== 'plus' && act !== 'remove') return;
     const itemEl = e.target.closest('.item');
     if (!itemEl) return;
     const item = state.items.find((i) => i.uid === itemEl.dataset.uid);
-    const act = e.target.dataset.act;
+    if (!item) return;
     if (act === 'minus') item.qty = Math.max(1, item.qty - 1);
     if (act === 'plus') item.qty += 1;
     if (act === 'remove') state.items = state.items.filter((i) => i.uid !== item.uid);
@@ -417,9 +430,17 @@ function bindCart() {
     const itemEl = e.target.closest('.item');
     if (!itemEl) return;
     const item = state.items.find((i) => i.uid === itemEl.dataset.uid);
-    if (e.target.dataset.act === 'grind') item.grind = e.target.value;
-    if (e.target.dataset.act === 'weight') item.weight = e.target.value;
-    if (e.target.dataset.act === 'qty') item.qty = Math.max(1, parseInt(e.target.value, 10) || 1);
+    if (!item) return;
+    const act = e.target.dataset.act;
+    if (act === 'grind') item.grind = e.target.value;
+    if (act === 'weight') item.weight = e.target.value;
+    if (act === 'qty') item.qty = Math.max(1, parseInt(e.target.value, 10) || 1);
+    if (act === 'grind' || act === 'weight') {
+      save();
+      updateItemPrice(itemEl, item);
+      renderSidebar();
+      return;
+    }
     renderAll();
   });
   document.getElementById('showMore').addEventListener('click', () => {

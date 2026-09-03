@@ -5,39 +5,226 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CofeFest — главная</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
   <div class="ax-bar">
     <span>Главная-заглушка прототипа</span>
     <a href="cart.html">Открыть корзину</a>
   </div>
-  <div class="topbar">
-    <div class="wrap">
-      <a href="index.html">Мы COFEFEST</a>
-      <a href="#">Для бизнеса</a>
-      <a href="#">Обучение и карьера</a>
-      <a href="#">Кофейни</a>
-    </div>
-  </div>
-  <header class="site-header">
-    <div class="wrap">
-      <div class="header-main">
-        <a class="brand" href="index.html"><img src="assets/logo.png" alt="CofeFest"></a>
-        <nav class="main-nav">
-          <a href="#">Кофе</a>
-          <a href="#">Летние напитки</a>
-          <a href="#">Акции</a>
-          <a href="cart.html">Онлайн-заказ</a>
-        </nav>
-        <div class="header-tools">
-          <a class="cart-link" href="cart.html">
-            <img src="assets/cart-icon.png" alt="Корзина">
-            <span class="badge" data-cart-count>0</span>
-          </a>
+<header class="header">
+<div class="container">
+    <button type="button" class="header__burger mobile" alt="Меню" name="Menu">
+        <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 8.44336H26" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M1 0.568359H26" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M1 16.3184H26" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </button>
+    <a href="index.html" class="header__logo" title="CofeFest">
+        <svg xmlns="http://www.w3.org/2000/svg" width="57" height="78" viewBox="0 0 57 78" fill="none">
+            <path d="M11.9375 66.957H8.37695V68.9434H11.2021V70.1475H8.37695V73.3701H7.17773V65.751H11.9375V66.957Z" fill="white"></path>
+            <path d="M21.6299 66.9629H18.0332V68.9766H20.8877V70.1904H18.0332V72.1582H21.6299V73.3701H16.8262V65.751H21.6299V66.9629Z" fill="white"></path>
+            <path d="M9.95703 53.7666C10.8598 53.7667 11.7402 54.083 12.4385 54.6562L12.6621 54.8408L11.8125 55.6943L11.6299 55.5518C11.1489 55.1726 10.5698 54.9727 9.95801 54.9727C8.45823 54.9729 7.23828 56.1976 7.23828 57.7031C7.2384 59.2085 8.4583 60.4324 9.95801 60.4326C10.5753 60.4326 11.1842 60.2164 11.667 59.8242V59.8223L11.8486 59.6729L12.6973 60.5254L12.4795 60.7109C11.7738 61.3065 10.8782 61.6356 9.95703 61.6357C7.79554 61.6357 6.0372 59.869 6.03711 57.7012C6.03711 55.5315 7.79548 53.7666 9.95703 53.7666Z" fill="white"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4961 53.7812C21.6521 53.7812 23.4053 55.5409 23.4053 57.7051C23.405 59.8691 21.65 61.6279 19.4961 61.6279C17.3422 61.6278 15.5881 59.8671 15.5879 57.7051C15.5879 55.541 17.342 53.7814 19.4961 53.7812ZM19.4961 54.9854C18.0018 54.9855 16.7863 56.2062 16.7861 57.7061C16.7861 59.2061 18.0017 60.4276 19.4961 60.4277C20.9905 60.4277 22.207 59.2062 22.207 57.7061C22.2068 56.2061 20.9904 54.9854 19.4961 54.9854Z" fill="white"></path>
+            <path d="M37.376 65.627C38.5443 65.627 39.0514 66.2267 39.4697 66.8408L39.5361 66.9365L38.6514 67.749L38.5703 67.5947C38.3952 67.2618 38.0815 66.8184 37.376 66.8184C36.851 66.8186 36.4259 67.2455 36.4258 67.7725C36.4258 68.2645 36.8842 68.5385 37.3359 68.6885L37.5293 68.7441C38.9425 69.1177 39.7538 69.9793 39.7539 71.1074C39.7539 72.4226 38.6863 73.4922 37.3779 73.4922C36.0679 73.492 35.0029 72.4225 35.0029 71.1074V70.8447H36.1875V71.1074C36.1875 71.7659 36.7202 72.3006 37.376 72.3008C38.032 72.3008 38.5654 71.766 38.5654 71.1074C38.5652 70.331 37.6293 70 37.2256 69.8945C35.9467 69.5579 35.2402 68.8027 35.2402 67.7705C35.2404 66.5888 36.1988 65.6272 37.376 65.627Z" fill="white"></path>
+            <path d="M50.3701 66.9697H47.9854V73.3574H46.7861V66.9697H44.4014V65.7646H50.3701V66.9697Z" fill="white"></path>
+            <path d="M40.3613 55.0977H36.8027V57.085H39.626V58.2891H36.8027V61.5107H35.6016V53.8926H40.3613V55.0977Z" fill="white"></path>
+            <path d="M49.8574 55.1055H46.2607V57.1182H49.1152V58.3311H46.2607V60.2998H49.8574V61.5107H45.0537V53.8926H49.8574V55.1055Z" fill="white"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M57 49.3936V78H0V49.3936H57ZM1.19922 50.5977V76.7959H27.918V50.5977H1.19922ZM29.1172 50.5977V76.7959H55.8008V50.5977H29.1172Z" fill="white"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M28.2568 0C36.409 0.000159142 43.4387 5.79714 44.9756 13.7822L44.9736 13.7861L45.1309 14.6035L44.3047 14.5127C43.7999 14.4572 43.2877 14.4297 42.7793 14.4297C35.7051 14.4297 29.6956 19.9271 29.0303 26.9727L34.9131 26.9697C34.9331 26.9698 34.9515 26.9707 34.9697 26.9707L35.1924 26.9805C37.7905 27.1266 39.8827 29.3313 39.8828 31.9541C39.8828 34.5956 37.7739 36.8003 35.1572 36.9297C34.8384 40.4663 31.8519 43.2177 28.3047 43.2178C24.5068 43.2178 21.416 40.115 21.416 36.3008V26.9707H27.5742C26.9106 19.9253 20.9003 14.4278 13.8262 14.4277C13.3176 14.4277 12.8047 14.4552 12.2998 14.5107L11.4746 14.6016L11.6309 13.7842C13.166 5.79701 20.1581 0 28.2568 0ZM22.6396 36.2998C22.6399 39.4349 25.1813 41.9854 28.3047 41.9854C31.4279 41.9852 33.9685 39.4349 33.9688 36.2998V28.1992H22.6396V36.2998ZM35.1924 35.6963C37.1457 35.5538 38.6572 33.9352 38.6572 31.9541C38.6571 29.9713 37.1474 28.3543 35.1924 28.21V35.6963ZM41.1113 7.84473C35.2515 10.1588 30.8531 15.2881 29.3955 21.418C31.9876 16.3862 37.352 13.1147 43.0459 13.2012L43.5957 13.2197C43.1203 11.2906 42.2851 9.48536 41.1113 7.84473ZM15.4844 7.84082C14.3161 9.48145 13.4832 11.2906 13.0078 13.2197C13.145 13.2123 13.2819 13.2068 13.418 13.2031L13.8262 13.1982C19.4206 13.1983 24.6558 16.4551 27.21 21.4141C25.7486 15.2823 21.3479 10.1529 15.4844 7.84082ZM28.2588 1.23047C24.6987 1.23047 21.2064 2.46744 18.4238 4.71289C17.6443 5.34365 16.9179 6.05416 16.2656 6.83105C22.2249 9.30227 26.6829 14.461 28.3047 20.7334C29.9264 14.4648 34.3801 9.30999 40.332 6.83691C39.6741 6.05817 38.944 5.34365 38.1572 4.71289C35.3564 2.46759 31.8426 1.23056 28.2588 1.23047Z" fill="white"></path>
+        </svg>
+    </a>
+    <nav class="header__nav desktop">
+        <ul class="header__top-list">
+            <li class="header__top-list__item">
+                <span class="header__top-list__item-link menu">Мы COFEFEST</span>
+                <nav class="services-popup-list">
+                    <a href="https://cofefest.ru/about-us/" title="О нас"><span>О нас</span></a>
+                    <a href="https://cofefest.ru/news/" title="Новости"><span>Новости</span></a>
+                    <a href="https://cofefest.ru/gallery/" title="Галерея"><span>Галерея</span></a>
+                </nav>
+            </li>
+            <li class="header__top-list__item">
+                <span class="header__top-list__item-link menu">Кофейни</span>
+                <nav class="services-popup-list">
+                    <a href="https://cofefest.ru/menu/" title="Меню"><span>Меню</span></a>
+                    <a href="https://cofefest.ru/menu/avtorskiy-kofe/" title="Авторский кофе"><span>Авторский кофе</span></a>
+                    <a href="https://cofefest.ru/contacts/" title="Наши адреса"><span>Наши адреса</span></a>
+                </nav>
+            </li>
+            <li class="header__top-list__item">
+                <span class="header__top-list__item-link menu">Для бизнеса</span>
+                <nav class="services-popup-list">
+                    <a href="https://cofefest.ru/events/cupping/" title="Каппинг"><span>Каппинг</span></a>
+                    <a href="https://cofefest.ru/business/" title="Для бизнеса"><span>Для бизнеса</span></a>
+                    <a href="https://cofefest.ru/services/franchise/" title="Франшиза"><span>Франшиза</span></a>
+                    <a href="https://cofefest.ru/services/coffee_wholesale/" title="Кофе для бизнеса"><span>Кофе для бизнеса</span></a>
+                    <a href="https://cofefest.ru/services/corpo-food/" title="Корпоративное питание"><span>Корпоративное питание</span></a>
+                    <a href="https://cofefest.ru/services/catering/" title="Кейтеринг"><span>Кейтеринг</span></a>
+                    <a href="https://cofefest.ru/services/barista/" title="Выездной бариста"><span>Выездной бариста</span></a>
+                    <a href="https://cofefest.ru/catalog/kofemashiny/" title="Оборудование"><span>Оборудование</span></a>
+                </nav>
+            </li>
+            <li class="header__top-list__item">
+                <span class="header__top-list__item-link menu">Обучение и карьера</span>
+                <nav class="services-popup-list">
+                    <a href="https://cofefest.ru/jobs/" title="Карьера"><span>Карьера</span></a>
+                </nav>
+            </li>
+        </ul>
+        <div class="header__search-block">
+            <div>
+                <label>
+                    <input class="header__search-input" type="text" placeholder="Поиск">
+                    <button type="button" class="header__search-enter-icon">
+                        <svg class="search-arrow"><use xlink:href="sprite.svg#slim-arrow"></use></svg>
+                    </button>
+                    <button type="button" class="header__search-close-icon">
+                        <svg class="crest"><use xlink:href="sprite.svg#crest"></use></svg>
+                    </button>
+                </label>
+            </div>
+            <div class="header__search-result">
+                <ul class="box-header-search__list"></ul>
+            </div>
         </div>
-      </div>
+        <ul class="header__bottom-list">
+            <li class="header__bottom-list__item menu">
+                <a href="https://cofefest.ru/catalog/internet-magazin/" class="header__bottom-list__item-link heading5" title="Онлайн-заказ">Онлайн-заказ</a>
+            </li>
+            <li class="header__bottom-list__item menu">
+                <a href="https://cofefest.ru/catalog/osennee-menyu/" class="header__bottom-list__item-link heading5" title="Осеннее меню">Осеннее меню</a>
+            </li>
+            <li class="header__bottom-list__item menu">
+                <a href="https://cofefest.ru/catalog/svezheobzharennyy-kofe/" class="header__bottom-list__item-link heading5" title="Кофе">Кофе</a>
+            </li>
+            <li class="header__bottom-list__item menu">
+                <a href="https://cofefest.ru/stocks/" class="header__bottom-list__item-link heading5" title="Акции">Акции</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="header__right">
+        <div class="header__right-btns-wrapper">
+            <a class="header__tg" href="https://t.me/cofefestsupport" target="_blank" rel="noopener">
+                <svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><path d="M19.6198 2.26307C19.4692 2.13402 19.2859 2.04832 19.0897 2.01527C18.8935 1.98221 18.6919 2.00307 18.5068 2.07557L1.69345 8.62667C1.47366 8.71231 1.28774 8.86623 1.1635 9.0654C1.03927 9.26458 0.98341 9.49829 1.00428 9.73158C1.02515 9.96487 1.12162 10.1852 1.27927 10.3596C1.43691 10.5339 1.64725 10.653 1.87881 10.6989L6.44244 11.6042V17.1911C6.44016 17.406 6.50336 17.6166 6.62377 17.7953C6.74418 17.9741 6.91619 18.1126 7.11729 18.1927C7.25201 18.2487 7.39654 18.2777 7.54259 18.278C7.68531 18.2776 7.82652 18.2491 7.95803 18.1941C8.08954 18.1391 8.20873 18.0587 8.30867 17.9577L10.9138 15.3739L14.7577 18.7288C14.9557 18.9032 15.2114 18.9997 15.4763 19C15.5915 18.9999 15.7059 18.9819 15.8154 18.9466C15.9961 18.8898 16.1586 18.787 16.2867 18.6484C16.4148 18.5099 16.504 18.3404 16.5454 18.157L19.9721 3.32694C20.0168 3.13461 20.0076 2.93381 19.9456 2.74628C19.8835 2.55875 19.7708 2.39165 19.6198 2.26307ZM1.73024 9.66769C1.72117 9.58961 1.73892 9.51079 1.78061 9.44395C1.8223 9.37712 1.8855 9.32619 1.95999 9.29939L17.372 3.29427L6.72233 10.9226L2.02173 9.99019C1.94365 9.97679 1.8724 9.93767 1.81951 9.87915C1.76661 9.82063 1.73516 9.74613 1.73024 9.66769ZM7.7933 17.4466C7.74234 17.4971 7.67741 17.5316 7.60673 17.5455C7.53604 17.5595 7.46278 17.5523 7.39619 17.525C7.32961 17.4976 7.2727 17.4513 7.23266 17.3918C7.19262 17.3324 7.17125 17.2625 7.17125 17.1911V12.1074L10.3656 14.8954L7.7933 17.4466ZM19.2617 3.16546L15.835 17.9955C15.8209 18.0565 15.7911 18.1129 15.7484 18.159C15.7058 18.2052 15.6518 18.2395 15.5917 18.2587C15.5316 18.278 15.4675 18.2814 15.4057 18.2686C15.3439 18.2559 15.2865 18.2275 15.2391 18.1861L7.39037 11.3358L19.2028 2.8746C19.2339 2.91565 19.2553 2.96308 19.2655 3.01341C19.2757 3.06374 19.2744 3.1157 19.2617 3.16546Z"></path></svg>
+            </a>
+            <button type="button" class="header__search desktop" id="header-search">
+                <svg class="search-icon"><use xlink:href="sprite.svg#search-header"></use></svg>
+            </button>
+            <a href="https://cofefest.ru/personal/" class="header__account" title="Аккаунт пользователя">
+                <svg class="profile"><use xlink:href="sprite.svg#profile"></use></svg>
+            </a>
+            <a href="cart.html" class="header__cart" title="Корзина">
+                <svg class="bag"><use xlink:href="sprite.svg#bag"></use></svg>
+                <div class="header__cart-value"><span data-cart-count>0</span></div>
+            </a>
+        </div>
+        <a href="tel:+74952121059" class="header__right-tel-link desktop" title="Контактный телефон">
+            <svg class="phone-icon"><use xlink:href="sprite.svg#phone"></use></svg>
+            <span>+7 (495) 212-10-59</span>
+        </a>
     </div>
-  </header>
+    <div class="header__burger-menu mobile">
+        <div class="search-block search-block--long">
+            <div>
+                <input class="search-block__input" type="text" placeholder="Поиск">
+            </div>
+        </div>
+        <div class="burger-menu__accordion accordion">
+            <div class="acc-item">
+                <div class="acc-head">
+                    <p class="heading4">Интернет-магазин</p>
+                    <svg class="arrow"><use xlink:href="sprite.svg#arrow"></use></svg>
+                </div>
+                <div class="acc-content menu">
+                    <div class="content">
+                        <a href="https://cofefest.ru/catalog/internet-magazin/" title="Интернет-магазин" class="burger-menu__link">Интернет-магазин</a>
+                    </div>
+                </div>
+            </div>
+            <div class="acc-item">
+                <div class="acc-head">
+                    <p class="heading4">Адреса кофеен</p>
+                    <svg class="arrow"><use xlink:href="sprite.svg#arrow"></use></svg>
+                </div>
+                <div class="acc-content menu">
+                    <div class="content">
+                        <a href="https://cofefest.ru/contacts/" title="Адреса кофеен" class="burger-menu__link">Адреса кофеен</a>
+                    </div>
+                </div>
+            </div>
+            <div class="acc-item">
+                <div class="acc-head">
+                    <p class="heading4">Акции</p>
+                    <svg class="arrow"><use xlink:href="sprite.svg#arrow"></use></svg>
+                </div>
+                <div class="acc-content menu">
+                    <div class="content">
+                        <a href="https://cofefest.ru/stocks/" title="Акции" class="burger-menu__link">Акции</a>
+                    </div>
+                </div>
+            </div>
+            <div class="acc-item">
+                <div class="acc-head">
+                    <p class="heading4">О компании</p>
+                    <svg class="arrow"><use xlink:href="sprite.svg#arrow"></use></svg>
+                </div>
+                <div class="acc-content menu">
+                    <div class="content">
+                        <a href="https://cofefest.ru/authors_coffee/" title="Авторский кофе" class="burger-menu__link">Авторский кофе</a>
+                        <a href="https://cofefest.ru/about-us/" title="О нас" class="burger-menu__link">О нас</a>
+                        <a href="https://cofefest.ru/news/" title="Новости" class="burger-menu__link">Новости</a>
+                        <a href="https://cofefest.ru/jobs/" title="Карьера" class="burger-menu__link">Карьера</a>
+                        <a href="https://cofefest.ru/shipping-and-payment/" title="Доставка и оплата" class="burger-menu__link">Доставка и оплата</a>
+                    </div>
+                </div>
+            </div>
+            <div class="acc-item">
+                <div class="acc-head">
+                    <p class="heading4">Услуги</p>
+                    <svg class="arrow"><use xlink:href="sprite.svg#arrow"></use></svg>
+                </div>
+                <div class="acc-content menu">
+                    <div class="content">
+                        <a href="https://cofefest.ru/events/cupping/" title="Каппинг" class="burger-menu__link">Каппинг</a>
+                        <a href="https://cofefest.ru/services/franchise/" title="Франшиза" class="burger-menu__link">Франшиза</a>
+                        <a href="https://cofefest.ru/business/" title="Для бизнеса" class="burger-menu__link">Для бизнеса</a>
+                        <a href="https://cofefest.ru/services/coffee_wholesale/" title="Кофе для бизнеса" class="burger-menu__link">Кофе для бизнеса</a>
+                        <a href="https://cofefest.ru/services/corpo-food/" title="Корпоративное питание" class="burger-menu__link">Корпоративное питание</a>
+                        <a href="https://cofefest.ru/services/catering/" title="Кейтеринг" class="burger-menu__link">Кейтеринг</a>
+                        <a href="https://cofefest.ru/services/barista/" title="Выездной бариста" class="burger-menu__link">Выездной бариста</a>
+                        <a href="https://cofefest.ru/catalog/kofemashiny/" title="Оборудование" class="burger-menu__link">Оборудование</a>
+                    </div>
+                </div>
+            </div>
+            <div class="acc-item">
+                <div class="acc-head">
+                    <p class="heading4">Меню кофеен</p>
+                    <svg class="arrow"><use xlink:href="sprite.svg#arrow"></use></svg>
+                </div>
+                <div class="acc-content menu">
+                    <div class="content">
+                        <a href="https://cofefest.ru/menu/" title="Меню кофеен" class="burger-menu__link">Меню кофеен</a>
+                    </div>
+                </div>
+            </div>
+            <div class="acc-item">
+                <div class="acc-head">
+                    <p class="heading4">Кофе в зёрнах</p>
+                    <svg class="arrow"><use xlink:href="sprite.svg#arrow"></use></svg>
+                </div>
+                <div class="acc-content menu">
+                    <div class="content">
+                        <a href="https://cofefest.ru/catalog/zernovoy-kofe-1-kg/" title="Кофе зерновой" class="burger-menu__link">Кофе зерновой</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
   <main class="page wrap">
     <div class="home-hero">
       <img src="assets/logo.png" alt="" style="height:64px;background:#1b2748;padding:8px">
@@ -48,6 +235,191 @@
       <p class="hint">Промокоды: COFE10, BLACKFRIDAY, FREESHIP, GIFT5000</p>
     </div>
   </main>
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+        <div class="footer__info">
+                        <a href="index.html" class="footer__top-logo" title="CofeFest">
+                <svg xmlns="http://www.w3.org/2000/svg" width="57" height="78" viewBox="0 0 57 78" fill="none">
+                    <path d="M11.9375 66.957H8.37695V68.9434H11.2021V70.1475H8.37695V73.3701H7.17773V65.751H11.9375V66.957Z" fill="white"></path>
+                    <path d="M21.6299 66.9629H18.0332V68.9766H20.8877V70.1904H18.0332V72.1582H21.6299V73.3701H16.8262V65.751H21.6299V66.9629Z" fill="white"></path>
+                    <path d="M9.95703 53.7666C10.8598 53.7667 11.7402 54.083 12.4385 54.6562L12.6621 54.8408L11.8125 55.6943L11.6299 55.5518C11.1489 55.1726 10.5698 54.9727 9.95801 54.9727C8.45823 54.9729 7.23828 56.1976 7.23828 57.7031C7.2384 59.2085 8.4583 60.4324 9.95801 60.4326C10.5753 60.4326 11.1842 60.2164 11.667 59.8242V59.8223L11.8486 59.6729L12.6973 60.5254L12.4795 60.7109C11.7738 61.3065 10.8782 61.6356 9.95703 61.6357C7.79554 61.6357 6.0372 59.869 6.03711 57.7012C6.03711 55.5315 7.79548 53.7666 9.95703 53.7666Z" fill="white"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4961 53.7812C21.6521 53.7812 23.4053 55.5409 23.4053 57.7051C23.405 59.8691 21.65 61.6279 19.4961 61.6279C17.3422 61.6278 15.5881 59.8671 15.5879 57.7051C15.5879 55.541 17.342 53.7814 19.4961 53.7812ZM19.4961 54.9854C18.0018 54.9855 16.7863 56.2062 16.7861 57.7061C16.7861 59.2061 18.0017 60.4276 19.4961 60.4277C20.9905 60.4277 22.207 59.2062 22.207 57.7061C22.2068 56.2061 20.9904 54.9854 19.4961 54.9854Z" fill="white"></path>
+                    <path d="M37.376 65.627C38.5443 65.627 39.0514 66.2267 39.4697 66.8408L39.5361 66.9365L38.6514 67.749L38.5703 67.5947C38.3952 67.2618 38.0815 66.8184 37.376 66.8184C36.851 66.8186 36.4259 67.2455 36.4258 67.7725C36.4258 68.2645 36.8842 68.5385 37.3359 68.6885L37.5293 68.7441C38.9425 69.1177 39.7538 69.9793 39.7539 71.1074C39.7539 72.4226 38.6863 73.4922 37.3779 73.4922C36.0679 73.492 35.0029 72.4225 35.0029 71.1074V70.8447H36.1875V71.1074C36.1875 71.7659 36.7202 72.3006 37.376 72.3008C38.032 72.3008 38.5654 71.766 38.5654 71.1074C38.5652 70.331 37.6293 70 37.2256 69.8945C35.9467 69.5579 35.2402 68.8027 35.2402 67.7705C35.2404 66.5888 36.1988 65.6272 37.376 65.627Z" fill="white"></path>
+                    <path d="M50.3701 66.9697H47.9854V73.3574H46.7861V66.9697H44.4014V65.7646H50.3701V66.9697Z" fill="white"></path>
+                    <path d="M40.3613 55.0977H36.8027V57.085H39.626V58.2891H36.8027V61.5107H35.6016V53.8926H40.3613V55.0977Z" fill="white"></path>
+                    <path d="M49.8574 55.1055H46.2607V57.1182H49.1152V58.3311H46.2607V60.2998H49.8574V61.5107H45.0537V53.8926H49.8574V55.1055Z" fill="white"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M57 49.3936V78H0V49.3936H57ZM1.19922 50.5977V76.7959H27.918V50.5977H1.19922ZM29.1172 50.5977V76.7959H55.8008V50.5977H29.1172Z" fill="white"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.2568 0C36.409 0.000159142 43.4387 5.79714 44.9756 13.7822L44.9736 13.7861L45.1309 14.6035L44.3047 14.5127C43.7999 14.4572 43.2877 14.4297 42.7793 14.4297C35.7051 14.4297 29.6956 19.9271 29.0303 26.9727L34.9131 26.9697C34.9331 26.9698 34.9515 26.9707 34.9697 26.9707L35.1924 26.9805C37.7905 27.1266 39.8827 29.3313 39.8828 31.9541C39.8828 34.5956 37.7739 36.8003 35.1572 36.9297C34.8384 40.4663 31.8519 43.2177 28.3047 43.2178C24.5068 43.2178 21.416 40.115 21.416 36.3008V26.9707H27.5742C26.9106 19.9253 20.9003 14.4278 13.8262 14.4277C13.3176 14.4277 12.8047 14.4552 12.2998 14.5107L11.4746 14.6016L11.6309 13.7842C13.166 5.79701 20.1581 0 28.2568 0ZM22.6396 36.2998C22.6399 39.4349 25.1813 41.9854 28.3047 41.9854C31.4279 41.9852 33.9685 39.4349 33.9688 36.2998V28.1992H22.6396V36.2998ZM35.1924 35.6963C37.1457 35.5538 38.6572 33.9352 38.6572 31.9541C38.6571 29.9713 37.1474 28.3543 35.1924 28.21V35.6963ZM41.1113 7.84473C35.2515 10.1588 30.8531 15.2881 29.3955 21.418C31.9876 16.3862 37.352 13.1147 43.0459 13.2012L43.5957 13.2197C43.1203 11.2906 42.2851 9.48536 41.1113 7.84473ZM15.4844 7.84082C14.3161 9.48145 13.4832 11.2906 13.0078 13.2197C13.145 13.2123 13.2819 13.2068 13.418 13.2031L13.8262 13.1982C19.4206 13.1983 24.6558 16.4551 27.21 21.4141C25.7486 15.2823 21.3479 10.1529 15.4844 7.84082ZM28.2588 1.23047C24.6987 1.23047 21.2064 2.46744 18.4238 4.71289C17.6443 5.34365 16.9179 6.05416 16.2656 6.83105C22.2249 9.30227 26.6829 14.461 28.3047 20.7334C29.9264 14.4648 34.3801 9.30999 40.332 6.83691C39.6741 6.05817 38.944 5.34365 38.1572 4.71289C35.3564 2.46759 31.8426 1.23056 28.2588 1.23047Z" fill="white"></path>
+                </svg>
+            </a>
+                        <ul class="footer__info-list">
+                <li>ООО "ЭСТЕТИКА КОФЕ"</li>
+<li>ОГРН 1247700466188</li>
+<li>ИНН 9726079310</li>            </ul>
+            </div>
+                        <div class="footer__top-block block1">
+                <p class="footer__top-block__heading heading5">Меню</p>
+                <ul class="footer__top-block__list">
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/stocks/" title="Акции и бонусы" class="menu">Акции и бонусы</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/menu/avtorskiy-kofe/" title="Авторский кофе" class="menu">Авторский кофе</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/news/" title="Новости" class="menu">Новости</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/shipping-and-payment/" title="Доставка и оплата" class="menu">Доставка и оплата</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/jobs/" title="Карьера" class="menu">Карьера</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/contacts/" title="Контакты" class="menu">Контакты</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/about-us/" title="О компании" class="menu">О компании</a>
+                                                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="footer__top-block block2">
+                <p class="footer__top-block__heading heading5">Для Бизнеса</p>
+                <ul class="footer__top-block__list">
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/business/" title="Арендодателям" class="menu">Арендодателям</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/services/barista/" title="Выездной бариста" class="menu">Выездной бариста</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/services/catering/" title="Кейтеринг" class="menu">Кейтеринг</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/services/corpo-food/" title="Корпоративное питание" class="menu">Корпоративное питание</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/business/" title="Открыть кофейню в мед. учреждении" class="menu">Открыть кофейню в мед. учреждении</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/services/franchise/" title="Франшиза" class="menu">Франшиза</a>
+                                                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="footer__top-block block3">
+                <p class="footer__top-block__heading heading5">Каталог</p>
+                <ul class="footer__top-block__list">
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/menu/" title="Меню кофеен" class="menu">Меню кофеен</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/catalog/torty-na-zakaz/" title="Торты на заказ" class="menu">Торты на заказ</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="" href="https://cofefest.ru/catalog/internet-magazin/#svezheobzharennyy-kofe" title="Кофе в зернах" class="menu">Кофе в зернах</a>
+                                                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="footer__top-block block4">
+                <p class="footer__top-block__heading heading5">Поддержка</p>
+                <ul class="footer__top-block__list">
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="text-us" href="#" title="Оставить отзыв" class="menu">Оставить отзыв</a>
+                                                                        </li>
+                                        <li class="footer__top-block__list-item">
+                                                                                    <a id="text-us" href="#" title="Написать в поддержку" class="menu">Написать в поддержку</a>
+                                                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="footer__top-right">
+                                <div class="footer__top-block block6">
+                    <p class="footer__top-block__heading heading5">Документация</p>
+                    <ul class="footer__top-block__list">
+                                                <li class="footer__top-block__list-item">
+                                                        <a href="https://cofefest.ru/upload/iblock/f77/sqdzjs06n6tulz9ggl7v3mfnx6jhd852.pdf" target="_blank" class="menu" title="Политика конфиденциальности">Политика конфиденциальности</a>
+                                                    </li>
+                                                <li class="footer__top-block__list-item">
+                                                        <a href="https://cofefest.ru/upload/iblock/92c/dfxg22h7ixfvn010tc70v5wwu5s9t4zz.pdf" target="_blank" class="menu" title="Договор оферты">Договор оферты</a>
+                                                    </li>
+                                            </ul>
+                </div>                <div class="footer__top-block block5">
+                    <p class="footer__top-block__heading heading5">Контакты</p>
+                    <ul class="footer__top-block__list">
+                                                <li class="footer__top-block__list-item">
+                                                        <a href="mailto:in@cofefest.ru" target="_blank" class="menu" title="in@cofefest.ru">in@cofefest.ru</a>
+                                                    </li>
+                                                <li class="footer__top-block__list-item">
+                                                        <a href="tel:+74952121059" target="_blank" class="menu" title="+7 (495) 212-10-59">+7 (495) 212-10-59</a>
+                                                    </li>
+                                                <li class="footer__top-block__list-item">
+                                                        <a href="mailto:in@cofefest.ru" target="_blank" class="menu" title="Создать коллаб проект ">Создать коллаб проект </a>
+                                                    </li>
+                                                <li class="footer__top-block__list-item">
+                                                        <a href="tel:+74952121059" target="_blank" class="menu" title="Сотрудничаем с блогерами: <br>+7 (495) 212-10-59</br><br>">Сотрудничаем с блогерами: <br>+7 (495) 212-10-59</br><br></a>
+                                                    </li>
+                                            </ul>
+                </div>            </div>
+                   <ul class="footer__top-social">
+                   <li class="footer__top-social__item">
+                    <a href="https://rutube.ru/channel/65639700" target="_blank" title="rutube" class="footer__top-social__item-link">
+                        <!--svg class="icon-link">
+                            <use xlink:href="https://cofefest.ru/sprite.svg#youtube" />
+                        </svg>-->
+                    </a>
+                </li>	
+
+                <li class="footer__top-social__item">
+                    <a href="https://vk.com/cofefest" target="_blank" title="vk" class="footer__top-social__item-link">
+                        <svg>
+                            <use xlink:href="https://cofefest.ru/sprite.svg#vk" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__top-social__item">
+                    <a href="https://t.me/cofefest" target="_blank" title="telegram" class="footer__top-social__item-link">
+                        <svg class="icon-link telegram">
+                            <use xlink:href="https://cofefest.ru/sprite.svg#telegram" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__top-social__item">
+                    <a href="https://dzen.ru/cofefest" target="_blank" title="dzen" class="footer__top-social__item-link">
+                        <svg class="icon-link">
+                            <use xlink:href="https://cofefest.ru/sprite.svg#dzen" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__bottom menu">
+        <div class="container">
+            <p class="footer__bottom-left">© 2026 CofeFest</p>
+            <p class="footer__bottom-center">Информация, размещенная на сайте, не является публичной офертой</p>
+            <img src="assets/pay-logos-footer.svg" alt="logo" class="footer__bottom-logos">
+        </div>
+    </div>
+        <a class="whatsapp" href="https://t.me/cofefestsupport">
+    <div class="chat-container">
+        <div class="message">
+            <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M38 76C58.9868 76 76 58.9868 76 38C76 17.0132 58.9868 0 38 0C17.0132 0 0 17.0132 0 38C0 58.9868 17.0132 76 38 76Z" fill="url(#paint0_linear_25_31)"/>
+            <path d="M56.9636 22.281C57.3018 20.0947 55.2232 18.3691 53.2792 19.2226L14.5616 36.2216C13.1676 36.8337 13.2696 38.9454 14.7154 39.4057L22.6998 41.9485C24.2239 42.4338 25.8739 42.1827 27.2047 41.2634L45.2064 28.8265C45.7493 28.4514 46.341 29.2234 45.8771 29.7013L32.9191 43.0611C31.6621 44.3571 31.9116 46.5533 33.4237 47.5014L47.9316 56.5991C49.5588 57.6194 51.652 56.5945 51.9563 54.628L56.9636 22.281Z" fill="white"/>
+                                    <path d="M64 24C70.6274 24 76 18.6274 76 12C76 5.37258 70.6274 0 64 0C57.3726 0 52 5.37258 52 12C52 18.6274 57.3726 24 64 24Z" fill="#FF0F0F"/>
+                    <path d="M64.9645 6.0909V17H63.6435V7.4759H63.5795L60.9162 9.2443V7.902L63.6435 6.0909H64.9645Z" fill="white"/>
+                                <defs>
+                <linearGradient id="paint0_linear_25_31" x1="38" y1="0" x2="38" y2="76" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#37BBFE"/>
+                <stop offset="1" stop-color="#007DBB"/>
+                </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+    </a>
+</footer>
+    <script src="js/header.js"></script>
   <script src="js/app.js"></script>
   <script>CartApp.renderHome();</script>
 </body>

@@ -21,8 +21,10 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   color: var(--text);
   background: #fafafa;
+  padding-top: 170px;
 }
 
 .ax-bar {
@@ -35,84 +37,25 @@ body {
   flex-wrap: wrap;
   gap: 16px;
   padding: 8px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+}
+.header {
+  top: 37px !important;
 }
 .ax-bar span:first-child { margin-right: auto; }
 .ax-bar a { color: #9ad0ff; }
 .ax-bar label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
 
-.topbar {
-  background: var(--navy-2);
-  color: #d7dce8;
-  font-size: 13px;
-}
-.topbar .wrap {
-  display: flex;
-  justify-content: flex-end;
-  gap: 22px;
-  padding: 8px 20px;
-}
-.topbar a { color: #d7dce8; text-decoration: none; }
-.topbar a:hover { color: #fff; }
-
-.site-header {
-  background: var(--navy);
-  color: #fff;
-  padding: 12px 0 0;
-}
-.header-main {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  padding-bottom: 12px;
-}
-.brand img { height: 52px; display: block; }
-.main-nav { display: flex; gap: 22px; flex: 1; }
-.main-nav a { color: #fff; text-decoration: none; font-size: 15px; }
-.main-nav a.active { border-bottom: 2px solid #fff; padding-bottom: 2px; }
-.header-tools { display: flex; align-items: center; gap: 14px; }
-.header-tools img { height: 28px; }
-.online-order { color: #fff; text-decoration: none; font-size: 14px; white-space: nowrap; }
-.cart-link { position: relative; display: block; }
-.cart-link img { height: 32px; }
-.badge {
-  position: absolute;
-  right: -2px; top: -2px;
-  background: #fff;
-  color: #111;
-  border-radius: 50%;
-  min-width: 18px;
-  height: 18px;
-  display: inline-grid;
-  place-items: center;
-  font-size: 11px;
-}
 .crumb {
-  color: #c5cad8;
+  color: #6b6b6b;
   font-size: 13px;
   padding: 0 0 12px;
 }
-.crumb a { color: #c5cad8; text-decoration: none; }
-
-.site-footer {
-  background: var(--navy);
-  color: #d7dce8;
-  padding: 36px 0 20px;
-  font-size: 13px;
-  margin-top: 40px;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 180px repeat(5, 1fr);
-  gap: 18px;
-}
-.site-footer h3 {
-  color: #fff;
-  font-size: 12px;
-  letter-spacing: .06em;
-  margin: 0 0 10px;
-}
-.site-footer a, .site-footer p { color: #c5cad8; text-decoration: none; display: block; margin: 0 0 6px; }
-.site-footer .legal { margin-top: 24px; font-size: 12px; color: #9aa3b8; display: flex; justify-content: space-between; gap: 16px; }
+.crumb a { color: #6b6b6b; text-decoration: none; }
 
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
 .page { padding: 28px 0 80px; }
@@ -166,7 +109,26 @@ h1.page-title {
 }
 .item-title { font-weight: 700; margin: 0 0 8px; font-size: 15px; }
 .item-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.item-controls select, .field input, .field textarea, .promo input, .qty input {
+.item-controls select.opt-select {
+  appearance: auto;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  min-width: 148px;
+  height: 36px;
+  padding: 6px 8px;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.item-controls select.opt-select:focus {
+  outline: 2px solid #1e98d7;
+  outline-offset: 1px;
+}
+.field input, .field textarea, .promo input, .qty input {
   border: 1px solid #bdbdbd;
   border-radius: 2px;
   padding: 7px 8px;
@@ -328,7 +290,7 @@ h1.page-title {
   background: #fff;
   padding: 16px 16px 18px;
   position: sticky;
-  top: 16px;
+  top: 180px;
 }
 .row {
   display: flex;
@@ -383,7 +345,7 @@ h1.page-title {
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 20;
+  z-index: 40;
   padding: 20px;
 }
 .modal.open { display: flex; }
@@ -489,6 +451,5 @@ h1.page-title {
   .price-col { grid-column: 2; text-align: left; }
   .grid-3 { grid-template-columns: 1fr; }
   .card { flex: 0 0 calc(50% - 6px); }
-  .main-nav, .topbar { display: none; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  body { padding-top: 120px; }
 }
