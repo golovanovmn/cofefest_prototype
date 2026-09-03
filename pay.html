@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оплата — CofeFest</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="ax-bar"><span>Оплата</span><a href="cart.html">Назад в корзину</a></div>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="header-main">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="CofeFest"></a>
+      </div>
+    </div>
+  </header>
+  <main class="page wrap">
+    <div class="success">
+      <h1 class="page-title">Оплата картой</h1>
+      <p>Сумма к оплате: <strong id="paySum">0 ₽</strong></p>
+      <p class="hint">Макет шлюза, как в ТЗ: после оплаты — кнопка вернуться на сайт.</p>
+      <p><a class="cta" href="success.html?mode=paid" style="display:inline-block;text-decoration:none">Оплатить</a></p>
+      <p><a href="index.html">Вернуться на сайт</a></p>
+      <img class="pay-logos" src="assets/pay-logos.png" alt="МИР, СБП, Visa, Mastercard">
+    </div>
+  </main>
+  <script src="js/app.js"></script>
+  <script>CartApp.renderPay();</script>
+</body>
+</html>

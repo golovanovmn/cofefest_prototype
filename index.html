@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CofeFest — главная</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="ax-bar">
+    <span>Главная-заглушка прототипа</span>
+    <a href="cart.html">Открыть корзину</a>
+  </div>
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html">Мы COFEFEST</a>
+      <a href="#">Для бизнеса</a>
+      <a href="#">Обучение и карьера</a>
+      <a href="#">Кофейни</a>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="header-main">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="CofeFest"></a>
+        <nav class="main-nav">
+          <a href="#">Кофе</a>
+          <a href="#">Летние напитки</a>
+          <a href="#">Акции</a>
+          <a href="cart.html">Онлайн-заказ</a>
+        </nav>
+        <div class="header-tools">
+          <a class="cart-link" href="cart.html">
+            <img src="assets/cart-icon.png" alt="Корзина">
+            <span class="badge" data-cart-count>0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="page wrap">
+    <div class="home-hero">
+      <img src="assets/logo.png" alt="" style="height:64px;background:#1b2748;padding:8px">
+      <h1>Мы создаём вкус</h1>
+      <p>Сюда пользователь попадает после очистки корзины — как в ТЗ.</p>
+      <p id="emptyNote" class="hint hidden">Корзина очищена.</p>
+      <p><a class="cta" href="cart.html" style="display:inline-block;width:auto;padding:12px 28px;text-decoration:none">Перейти в корзину</a></p>
+      <p class="hint">Промокоды: COFE10, BLACKFRIDAY, FREESHIP, GIFT5000</p>
+    </div>
+  </main>
+  <script src="js/app.js"></script>
+  <script>CartApp.renderHome();</script>
+</body>
+</html>
